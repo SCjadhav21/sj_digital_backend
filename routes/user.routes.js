@@ -63,6 +63,9 @@ UserRouter.post("/login", async (req, res) => {
             msg: "Login Successfull",
             alert: "Logged In",
             token: token,
+            name:user.name,
+            address:user.address,
+            userId:user._id
           });
         } else {
           res.send({ msg: "Login Failure", alert: "Wrong Credntials" });
