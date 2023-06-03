@@ -8,7 +8,7 @@ const PostRouter = express.Router();
 PostRouter.use(Authentication);
 PostRouter.get("/", async (req, res) => {
   try {
-    const post = await PostModel.find({});
+    const post = await PostModel.find();
     res.send(post);
   } catch (err) {
     return res.send(err.message);
